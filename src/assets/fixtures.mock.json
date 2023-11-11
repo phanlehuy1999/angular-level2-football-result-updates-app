@@ -1,16 +1,84 @@
 {
-  "get": "standings",
+  "get": "fixtures",
   "parameters": {
     "team": "40",
     "last": "10"
   },
   "errors": [],
-  "results": 1,
+  "results": 10,
   "paging": {
     "current": 1,
     "total": 1
   },
   "response": [
+    {
+      "fixture": {
+        "id": 1126386,
+        "referee": "Georgi Kabakov, Bulgaria",
+        "timezone": "UTC",
+        "date": "2023-11-09T17:45:00+00:00",
+        "timestamp": 1699551900,
+        "periods": {
+          "first": 1699551900,
+          "second": 1699555500
+        },
+        "venue": {
+          "id": 682,
+          "name": "Stadium de Toulouse",
+          "city": "Toulouse"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 3,
+        "name": "UEFA Europa League",
+        "country": "World",
+        "logo": "https://media-4.api-sports.io/football/leagues/3.png",
+        "flag": null,
+        "season": 2023,
+        "round": "Group Stage - 4"
+      },
+      "teams": {
+        "home": {
+          "id": 96,
+          "name": "Toulouse",
+          "logo": "https://media-4.api-sports.io/football/teams/96.png",
+          "winner": true
+        },
+        "away": {
+          "id": 40,
+          "name": "Liverpool",
+          "logo": "https://media-4.api-sports.io/football/teams/40.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
     {
       "fixture": {
         "id": 1035141,
@@ -67,6 +135,550 @@
         },
         "fulltime": {
           "home": 1,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1136340,
+        "referee": "J. Brooks",
+        "timezone": "UTC",
+        "date": "2023-11-01T19:45:00+00:00",
+        "timestamp": 1698867900,
+        "periods": {
+          "first": 1698867900,
+          "second": 1698871500
+        },
+        "venue": {
+          "id": 504,
+          "name": "Vitality Stadium",
+          "city": "Bournemouth, Dorset"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 48,
+        "name": "League Cup",
+        "country": "England",
+        "logo": "https://media-4.api-sports.io/football/leagues/48.png",
+        "flag": "https://media-4.api-sports.io/flags/gb.svg",
+        "season": 2023,
+        "round": "Round of 16"
+      },
+      "teams": {
+        "home": {
+          "id": 35,
+          "name": "Bournemouth",
+          "logo": "https://media-4.api-sports.io/football/teams/35.png",
+          "winner": false
+        },
+        "away": {
+          "id": 40,
+          "name": "Liverpool",
+          "logo": "https://media-4.api-sports.io/football/teams/40.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1035133,
+        "referee": "C. Kavanagh",
+        "timezone": "UTC",
+        "date": "2023-10-29T14:00:00+00:00",
+        "timestamp": 1698588000,
+        "periods": {
+          "first": 1698588000,
+          "second": 1698591600
+        },
+        "venue": {
+          "id": 550,
+          "name": "Anfield",
+          "city": "Liverpool"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 39,
+        "name": "Premier League",
+        "country": "England",
+        "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+        "flag": "https://media-4.api-sports.io/flags/gb.svg",
+        "season": 2023,
+        "round": "Regular Season - 10"
+      },
+      "teams": {
+        "home": {
+          "id": 40,
+          "name": "Liverpool",
+          "logo": "https://media-4.api-sports.io/football/teams/40.png",
+          "winner": true
+        },
+        "away": {
+          "id": 65,
+          "name": "Nottingham Forest",
+          "logo": "https://media-4.api-sports.io/football/teams/65.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 2,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 3,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1126378,
+        "referee": "Rade Obrenovi\u010d, Slovenia",
+        "timezone": "UTC",
+        "date": "2023-10-26T19:00:00+00:00",
+        "timestamp": 1698346800,
+        "periods": {
+          "first": 1698346800,
+          "second": 1698350400
+        },
+        "venue": {
+          "id": 550,
+          "name": "Anfield",
+          "city": "Liverpool"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 3,
+        "name": "UEFA Europa League",
+        "country": "World",
+        "logo": "https://media-4.api-sports.io/football/leagues/3.png",
+        "flag": null,
+        "season": 2023,
+        "round": "Group Stage - 3"
+      },
+      "teams": {
+        "home": {
+          "id": 40,
+          "name": "Liverpool",
+          "logo": "https://media-4.api-sports.io/football/teams/40.png",
+          "winner": true
+        },
+        "away": {
+          "id": 96,
+          "name": "Toulouse",
+          "logo": "https://media-4.api-sports.io/football/teams/96.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 5,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 3,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 5,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1035121,
+        "referee": "C. Pawson",
+        "timezone": "UTC",
+        "date": "2023-10-21T11:30:00+00:00",
+        "timestamp": 1697887800,
+        "periods": {
+          "first": 1697887800,
+          "second": 1697891400
+        },
+        "venue": {
+          "id": 550,
+          "name": "Anfield",
+          "city": "Liverpool"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 39,
+        "name": "Premier League",
+        "country": "England",
+        "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+        "flag": "https://media-4.api-sports.io/flags/gb.svg",
+        "season": 2023,
+        "round": "Regular Season - 9"
+      },
+      "teams": {
+        "home": {
+          "id": 40,
+          "name": "Liverpool",
+          "logo": "https://media-4.api-sports.io/football/teams/40.png",
+          "winner": true
+        },
+        "away": {
+          "id": 45,
+          "name": "Everton",
+          "logo": "https://media-4.api-sports.io/football/teams/45.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1035108,
+        "referee": "A. Taylor",
+        "timezone": "UTC",
+        "date": "2023-10-08T13:00:00+00:00",
+        "timestamp": 1696770000,
+        "periods": {
+          "first": 1696770000,
+          "second": 1696773600
+        },
+        "venue": {
+          "id": 508,
+          "name": "The American Express Community Stadium",
+          "city": "Falmer, East Sussex"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 39,
+        "name": "Premier League",
+        "country": "England",
+        "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+        "flag": "https://media-4.api-sports.io/flags/gb.svg",
+        "season": 2023,
+        "round": "Regular Season - 8"
+      },
+      "teams": {
+        "home": {
+          "id": 51,
+          "name": "Brighton",
+          "logo": "https://media-4.api-sports.io/football/teams/51.png",
+          "winner": null
+        },
+        "away": {
+          "id": 40,
+          "name": "Liverpool",
+          "logo": "https://media-4.api-sports.io/football/teams/40.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 2
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 2
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1126360,
+        "referee": "Morten Krogh, Denmark",
+        "timezone": "UTC",
+        "date": "2023-10-05T19:00:00+00:00",
+        "timestamp": 1696532400,
+        "periods": {
+          "first": 1696532400,
+          "second": 1696536000
+        },
+        "venue": {
+          "id": 550,
+          "name": "Anfield",
+          "city": "Liverpool"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 3,
+        "name": "UEFA Europa League",
+        "country": "World",
+        "logo": "https://media-4.api-sports.io/football/leagues/3.png",
+        "flag": null,
+        "season": 2023,
+        "round": "Group Stage - 2"
+      },
+      "teams": {
+        "home": {
+          "id": 40,
+          "name": "Liverpool",
+          "logo": "https://media-4.api-sports.io/football/teams/40.png",
+          "winner": true
+        },
+        "away": {
+          "id": 1393,
+          "name": "Union St. Gilloise",
+          "logo": "https://media-4.api-sports.io/football/teams/1393.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1035104,
+        "referee": "S. Hooper",
+        "timezone": "UTC",
+        "date": "2023-09-30T16:30:00+00:00",
+        "timestamp": 1696091400,
+        "periods": {
+          "first": 1696091400,
+          "second": 1696095000
+        },
+        "venue": {
+          "id": 593,
+          "name": "Tottenham Hotspur Stadium",
+          "city": "London"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 39,
+        "name": "Premier League",
+        "country": "England",
+        "logo": "https://media-4.api-sports.io/football/leagues/39.png",
+        "flag": "https://media-4.api-sports.io/flags/gb.svg",
+        "season": 2023,
+        "round": "Regular Season - 7"
+      },
+      "teams": {
+        "home": {
+          "id": 47,
+          "name": "Tottenham",
+          "logo": "https://media-4.api-sports.io/football/teams/47.png",
+          "winner": true
+        },
+        "away": {
+          "id": 40,
+          "name": "Liverpool",
+          "logo": "https://media-4.api-sports.io/football/teams/40.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 2,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 1,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 2,
+          "away": 1
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1125711,
+        "referee": "T. Robinson",
+        "timezone": "UTC",
+        "date": "2023-09-27T18:45:00+00:00",
+        "timestamp": 1695840300,
+        "periods": {
+          "first": 1695840300,
+          "second": 1695843900
+        },
+        "venue": {
+          "id": 550,
+          "name": "Anfield",
+          "city": "Liverpool"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90
+        }
+      },
+      "league": {
+        "id": 48,
+        "name": "League Cup",
+        "country": "England",
+        "logo": "https://media-4.api-sports.io/football/leagues/48.png",
+        "flag": "https://media-4.api-sports.io/flags/gb.svg",
+        "season": 2023,
+        "round": "3rd Round"
+      },
+      "teams": {
+        "home": {
+          "id": 40,
+          "name": "Liverpool",
+          "logo": "https://media-4.api-sports.io/football/teams/40.png",
+          "winner": true
+        },
+        "away": {
+          "id": 46,
+          "name": "Leicester",
+          "logo": "https://media-4.api-sports.io/football/teams/46.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 3,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 1
+        },
+        "fulltime": {
+          "home": 3,
           "away": 1
         },
         "extratime": {

@@ -8,7 +8,7 @@ interface Score {
   away: number | null;
 }
 
-interface FixtureInfo {
+export interface GameResult {
   fixture: Fixture;
   league: League;
   teams: {
@@ -25,5 +25,5 @@ interface FixtureInfo {
 }
 
 export interface Fixtures extends ResponseInfo {
-  response: FixtureInfo[];
+  response: GameResult[];
 }

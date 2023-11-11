@@ -1,0 +1,49 @@
+:host {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.container {
+  padding: 30px;
+  border: 10px;
+  background-color: white;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 1fr 1fr 4fr 1fr;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.table div {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.button-back {
+  all: unset;
+  background-color: #223344;
+  width: 200px;
+  padding: 16px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.button-back:hover {
+  color: white;
+  cursor: pointer;
+}

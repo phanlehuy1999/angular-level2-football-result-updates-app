@@ -1,0 +1,42 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.button-toggles {
+  width: max-content;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #223344;
+  gap: 20px;
+}
+
+.button-toggles button {
+  all: unset;
+  width: calc(100% / 5);
+  padding: 16px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.button-toggles button:hover {
+  box-shadow: 0px -4px 0px 0px white inset;
+  color: white;
+}
+
+.button-toggles button.activeLink {
+  box-shadow: 0px -4px 0px 0px white inset;
+  color: white;
+}

@@ -7,6 +7,6 @@ export interface League {
   logo?: string;
   flag?: string;
   season?: number;
-  standings?: Standing[];
+  standings?: Standing[][];
   round?: string;
 }

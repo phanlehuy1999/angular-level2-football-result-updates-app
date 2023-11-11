@@ -1,0 +1,23 @@
+<ng-container *ngIf="isLoading; else isLoaded">
+  <span>Loading...</span>
+</ng-container>
+<ng-template #isLoaded>
+  <div class="container">
+    <div class="table">
+      <ng-container *ngFor="let item of gameResults">
+        <div>
+          <img class="logo" [src]="item.teams.home.logo" alt="logo" />
+        </div>
+        <div>{{ item.teams.home.name }}</div>
+        <div>{{ item.goals.home }}</div>
+        <div>-</div>
+        <div>{{ item.goals.away }}</div>
+        <div>{{ item.teams.away.name }}</div>
+        <div>
+          <img class="logo" [src]="item.teams.away.logo" alt="logo" />
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <button class="button-back" (click)="handleBack()">Back</button>
+</ng-template>

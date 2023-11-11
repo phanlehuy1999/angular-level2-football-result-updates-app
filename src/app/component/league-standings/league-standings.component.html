@@ -1,0 +1,35 @@
+<ng-container *ngIf="isLoading; else isLoaded">
+  <span>Loading...</span>
+</ng-container>
+<ng-template #isLoaded>
+  <table>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>Name</th>
+      <th>Games</th>
+      <th>W</th>
+      <th>L</th>
+      <th>D</th>
+      <th>Goal Difference</th>
+      <th>Points</th>
+    </tr>
+    <ng-container *ngFor="let item of standingList">
+      <tr class="row" (click)="viewGameResults(item.team.id)">
+        <td>{{ item.rank }}</td>
+        <td>
+          <div class="logo-wrapper">
+            <img class="logo" [src]="item.team.logo" alt="logo" />
+          </div>
+        </td>
+        <td>{{ item.team.name }}</td>
+        <td>{{ item.all.played }}</td>
+        <td>{{ item.all.win }}</td>
+        <td>{{ item.all.lose }}</td>
+        <td>{{ item.all.draw }}</td>
+        <td>{{ item.goalsDiff }}</td>
+        <td>{{ item.points }}</td>
+      </tr>
+    </ng-container>
+  </table>
+</ng-template>

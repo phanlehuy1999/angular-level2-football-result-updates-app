@@ -1,0 +1,28 @@
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+table,
+th,
+td {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+  text-align: left;
+  padding: 5px 10px;
+  cursor: default;
+}
+
+tr {
+  background-color: white;
+}
+
+.row:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}

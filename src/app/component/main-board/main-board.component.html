@@ -1,0 +1,14 @@
+<h1>FOOTBALL UPDATES</h1>
+<div class="container">
+  <div class="button-toggles">
+    <ng-container *ngFor="let item of defaultLeagues">
+      <button
+        [routerLink]="[item.id]"
+        [ngClass]="{ activeLink: activeLeagueId === item.id }"
+      >
+        {{ item.country }}
+      </button>
+    </ng-container>
+  </div>
+  <router-outlet></router-outlet>
+</div>
