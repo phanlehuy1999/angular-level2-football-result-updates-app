@@ -10,9 +10,6 @@ import { API, API_KEY, LAST_FIXTURES } from 'src/app/shared/constant';
   providedIn: 'root',
 })
 export class FootballUpdatesService {
-  readonly standingsMockUrl = 'assets/standings.mock.json';
-  readonly fixturesMockUrl = 'assets/fixtures.mock.json';
-
   readonly standingsAPI = `${API}/standings`;
   readonly fixturesAPI = `${API}/fixtures`;
 
@@ -32,7 +29,7 @@ export class FootballUpdatesService {
     const currentSeason = date.getFullYear();
     httpOptions.params = httpOptions.params.set('league', leagueId);
     httpOptions.params = httpOptions.params.set('season', currentSeason);
-    return this.http.get<Standings>(this.standingsMockUrl, httpOptions).pipe(
+    return this.http.get<Standings>(this.standingsAPI, httpOptions).pipe(
       map((standings) => {
         if (standings.response?.length > 0) {
           return standings.response[0].league?.standings?.[0] || [];
@@ -41,15 +38,6 @@ export class FootballUpdatesService {
       }),
       catchError(() => of([]))
     );
-    // return this.http.get<Standings>(this.standingsAPI, httpOptions).pipe(
-    //   map((standings) => {
-    //     if (standings.response?.length > 0) {
-    //       return standings.response[0].league?.standings?.[0] || [];
-    //     }
-    //     return [];
-    //   }),
-    //   catchError(() => of([]))
-    // );
   }
 
   fetchTeamGameResultsData(team: number): Observable<GameResult[]> {
@@ -59,13 +47,9 @@ export class FootballUpdatesService {
     };
     httpOptions.params = httpOptions.params.set('team', team);
     httpOptions.params = httpOptions.params.set('last', LAST_FIXTURES);
-    return this.http.get<Fixtures>(this.fixturesMockUrl, httpOptions).pipe(
+    return this.http.get<Fixtures>(this.fixturesAPI, httpOptions).pipe(
       map((fixtures) => fixtures.response || []),
       catchError(() => of([]))
     );
-    // return this.http.get<Fixtures>(this.fixturesAPI, httpOptions).pipe(
-    //   map((fixtures) => fixtures.response || []),
-    //   catchError(() => of([]))
-    // );
   }
 }
