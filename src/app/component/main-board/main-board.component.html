@@ -3,6 +3,7 @@
   <div class="button-toggles">
     <ng-container *ngFor="let item of defaultLeagues">
       <button
+        [id]="item.country.toLowerCase() + 'Select'"
         [routerLink]="[item.id]"
         [ngClass]="{ activeLink: activeLeagueId === item.id }"
       >

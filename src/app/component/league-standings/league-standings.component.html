@@ -15,14 +15,16 @@
       <th>Points</th>
     </tr>
     <ng-container *ngFor="let item of standingList">
-      <tr class="row" (click)="viewGameResults(item.team.id)">
+      <tr>
         <td>{{ item.rank }}</td>
         <td>
           <div class="logo-wrapper">
             <img class="logo" [src]="item.team.logo" alt="logo" />
           </div>
         </td>
-        <td>{{ item.team.name }}</td>
+        <td class="team-name" (click)="viewGameResults(item.team.id)">
+          {{ item.team.name }}
+        </td>
         <td>{{ item.all.played }}</td>
         <td>{{ item.all.win }}</td>
         <td>{{ item.all.lose }}</td>
