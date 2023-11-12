@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { Standing } from 'src/app/model/standing.model';
 import { FootballUpdatesService } from 'src/app/service/football-updates/football-updates.service';
 
@@ -8,9 +9,12 @@ import { FootballUpdatesService } from 'src/app/service/football-updates/footbal
   templateUrl: './league-standings.component.html',
   styleUrls: ['./league-standings.component.css'],
 })
-export class LeagueStandingsComponent implements OnInit {
+export class LeagueStandingsComponent implements OnInit, OnDestroy {
   standingList: Standing[] = [];
   isLoading: boolean = false;
+
+  routeSubcription = Subscription.EMPTY;
+  apiSubcription = Subscription.EMPTY;
 
   constructor(
     private footballUpdatesService: FootballUpdatesService,
@@ -19,7 +23,7 @@ export class LeagueStandingsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
+    this.routeSubcription = this.route.params.subscribe((params) => {
       const { leagueId } = params;
       this.getLeagueStandingsData(Number(leagueId));
     });
@@ -27,7 +31,7 @@ export class LeagueStandingsComponent implements OnInit {
 
   getLeagueStandingsData(leagueId: number): void {
     this.isLoading = true;
-    this.footballUpdatesService
+    this.apiSubcription = this.footballUpdatesService
       .fetchLeagueStandingsData(leagueId)
       .subscribe((value) => {
         this.isLoading = false;
@@ -37,5 +41,10 @@ export class LeagueStandingsComponent implements OnInit {
 
   viewGameResults(teamId: number): void {
     this.router.navigate(['team-game-results', teamId]);
+  }
+
+  ngOnDestroy(): void {
+    this.routeSubcription.unsubscribe();
+    this.apiSubcription.unsubscribe();
   }
 }

@@ -1,6 +1,7 @@
 import { Location } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { GameResult } from 'src/app/model/fixtures.model';
 import { FootballUpdatesService } from 'src/app/service/football-updates/football-updates.service';
 
@@ -9,9 +10,12 @@ import { FootballUpdatesService } from 'src/app/service/football-updates/footbal
   templateUrl: './team-game-results.component.html',
   styleUrls: ['./team-game-results.component.css'],
 })
-export class TeamGameResultsComponent implements OnInit {
+export class TeamGameResultsComponent implements OnInit, OnDestroy {
   gameResults: GameResult[] = [];
   isLoading: boolean = false;
+
+  routeSubcription = Subscription.EMPTY;
+  apiSubcription = Subscription.EMPTY;
 
   constructor(
     private footballUpdatesService: FootballUpdatesService,
@@ -20,7 +24,7 @@ export class TeamGameResultsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
+    this.routeSubcription = this.route.params.subscribe((params) => {
       const { teamId } = params;
       this.getTeamGameResultsData(Number(teamId));
     });
@@ -28,7 +32,7 @@ export class TeamGameResultsComponent implements OnInit {
 
   getTeamGameResultsData(teamId: number): void {
     this.isLoading = true;
-    this.footballUpdatesService
+    this.apiSubcription = this.footballUpdatesService
       .fetchTeamGameResultsData(teamId)
       .subscribe((value) => {
         this.isLoading = false;
@@ -38,5 +42,10 @@ export class TeamGameResultsComponent implements OnInit {
 
   handleBack(): void {
     this.location.back();
+  }
+
+  ngOnDestroy(): void {
+    this.routeSubcription.unsubscribe();
+    this.apiSubcription.unsubscribe();
   }
 }
